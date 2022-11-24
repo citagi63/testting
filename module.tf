@@ -29,3 +29,19 @@ module "vpc" {
   cluster_name     = "conductor-server" # string
   cluster_tag_name = "conductor-server"# string
 }
+module "ecs-fargate" {
+  source  = "spacelift.io/citagi63/ecs-fargate/default"
+  version = "0.1.0"
+
+  # Required inputs 
+  alb_name           = "counducor-alb" # string
+  app_image          = "nginx" # string
+  environment        = "dev"# string
+  private_subnet_ids = module.vpc.private_subnet_tag_name.id# list(string)
+  region             = "us-east-2"# string
+  vpc_id             = module.vpc.vpc_tag_name.id# string
+
+  # Optional inputs 
+  #container_port = 80
+  #ecr_repo       = "conductor"
+}
