@@ -1,6 +1,6 @@
 module "vpc" {
   source = "./vpc"
-  app_port = var.app_port
+  app_port = 80
   vpc_tag_name= var.vpc_tag_name
   main_pvt_route_table_id = var.main_pvt_route_table_id
   environment = var.environment
