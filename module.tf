@@ -21,25 +21,11 @@ module "vpc" {
    public_subnet_cidr_blocks     =  ["10.0.5.0/24" , "10.0.6.0/24"]
   vpc_cidr_block                = "10.0.0.0/16"
 }
-module "opensearch" {
-  source  = "spacelift.io/citagi63/opensearch/default"
+ module "ecs-cluster" {
+  source  = "spacelift.io/citagi63/ecs-cluster/default"
   version = "0.1.0"
 
   # Required inputs 
-  # domain_name                    = .terraform/modules/opensearch.var.domain_name # string
-  #ebs_enabled                    = # bool
-  #elasticsearch_version          = # string
-  #instance_count                 = # number
-  #instance_type                  = # string
-  #internal_user_database_enabled = # bool
-  #master_user_name               = # string
-  #master_user_password           = # string
-  #subnet_id                      = # string
-  #volume_size                    = # number
-  #volume_type                    = # string
-
-  # Optional inputs 
-  # enforce_https       = bool
-  # include_numbers     = bool
-  # tls_security_policy = string
+  cluster_name     = conductor-server # string
+  cluster_tag_name = conductor-server# string
 }
