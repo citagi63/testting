@@ -1,22 +1,16 @@
 module "vpc" {
-  source  = "./vpc/"
- 
-  # Required inputs 
-  app_port                = var.app_port
-  aws_default_region      = var.aws_default_region
-  environment             = var.environment
-  main_pvt_route_table_id = var.main_pvt_route_table_id
-  private_subnet_tag_name = var.private_subnet_tag_name
-  public_subnet_tag_name  = var.public_subnet_tag_name
-  vpc_tag_name            = var.vpc_tag_name
-
-  # Optional inputs 
-  # availability_zones            = list(string)
-  # number_of_private_subnets     = number
-  # number_of_private_subnets_db  = number
-  # number_of_public_subnets      = number
-  # private_subnet_cidr_blocks    = list(string)
-  # private_subnet_cidr_blocks_db = list(string)
-  # public_subnet_cidr_blocks     = list(string)
-  # vpc_cidr_block                = string
+  source                        = "./vpc"
+  vpc_tag_name                  = "${var.platform_name}-vpc"
+  number_of_private_subnets     = 2
+  private_subnet_tag_name       = "${var.platform_name}-private-subnet"
+  route_table_tag_name          = "${var.platform_name}-rt"
+  environment                   = var.environment
+  security_group_lb_name        = "${var.platform_name}-alb-sg"
+  security_group_ecs_tasks_name = "${var.platform_name}-ecs-tasks-sg"
+  app_port                      = var.app_port
+  main_pvt_route_table_id       = module.vpc.main_pvt_route_table_id
+  availability_zones            = var.availability_zones
+  aws_default_region            = var.aws_default_region
+  public_subnet_tag_name        = "${var.platform_name}-public-subnet"
+  number_of_public_subnets      = 2
 }
