@@ -1,4 +1,4 @@
 module "vpc" {
   source = "./vpc"
-  app_name = var.app_name 
+  app_port = var.app_port
 }
