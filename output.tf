@@ -21,3 +21,6 @@ output "vpc_cidr_block" {
 output private_subnet_cidr_blocks {
   value = module.vpc.private_subnet_cidr_blocks
 }
+output "private_subnet_ids" {
+  value = module.vpc.private_subnet_tag_name.id
+    }
