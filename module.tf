@@ -24,23 +24,4 @@ module "vpc" {
 module "opensearch" {
   source  = "spacelift.io/citagi63/opensearch/default"
   version = "0.1.0"
-
-  # Required inputs 
-  dedicated_master_enabled       = true # bool
-  #domain_name                    = "counductor" # string
-  ebs_enabled                    = true # bool
-  #elasticsearch_version          = "opensearch_2.3" # string
-  instance_count                 = 1# number
-  instance_type                  = "t3.medium.elasticsearch" # string
-  internal_user_database_enabled = true# bool
-  master_user_name               = "master" # string
-  master_user_password           = "Master@12" # string
-  subnet_id                      = module.vpc.private_subnet_tag_name.id # string
-  #volume_size                    = 20 # number
-  #volume_type                    = "gp2" # string
-
-  # Optional inputs 
-  enforce_https       = true
-   include_numbers     = true
-  tls_security_policy = ""
 }
