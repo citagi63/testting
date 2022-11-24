@@ -49,10 +49,11 @@ variable "private_subnet_cidr_blocks" {
   description = "CIDR block range for the private subnets"
 }
 
-variable "app_port" {
-  type        = string
-  description = "app port"
-}
+#variable "app_port" {
+ # type        = string
+  #description = "app port"
+#}
+variable "app_port" {}
 
 variable "aws_default_region" {}
 
