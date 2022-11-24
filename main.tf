@@ -3,7 +3,7 @@ module "vpc" {
   vpc_tag_name                  = "${var.platform_name}-vpc"
   number_of_private_subnets     = 2
   private_subnet_tag_name       = "${var.platform_name}-private-subnet"
-  route_table_tag_name          = "${var.platform_name}-rt"
+  #route_table_tag_name          = "${var.platform_name}-rt"
   environment                   = var.environment
   #security_group_lb_name        = "${var.platform_name}-alb-sg"
   #security_group_ecs_tasks_name = "${var.platform_name}-ecs-tasks-sg"
