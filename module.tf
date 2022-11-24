@@ -37,9 +37,9 @@ module "ecs-fargate" {
   alb_name           = "counducor-alb" # string
   app_image          = "nginx" # string
   environment        = "dev"# string
-  private_subnet_ids = module.vpc.private_subnet_tag_name.id# list(string)
+  private_subnet_ids = var.private_subnet_tag_name.id # list(string)
   region             = "us-east-2"# string
-  vpc_id             = module.vpc.vpc_tag_name.id# string
+  vpc_id             = var.vpc_tag_name.id# string
 
   # Optional inputs 
   #container_port = 80
