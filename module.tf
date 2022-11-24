@@ -26,7 +26,7 @@ module "vpc" {
   version = "0.1.0"
 
   # Required inputs 
-  cluster_name     = var.cluster.name # string
+  cluster_name     = var.cluster_name # string
   cluster_tag_name = "conductor-server"# string
 }
 module "ecs-fargate" {
