@@ -21,4 +21,6 @@ module "ecs-cluster" {
 }
 module "ecs_fargate" {
   source = "./ecs-fargate"
+  alb_name  = "conductor"
+  app_image = "nginx"
   }
