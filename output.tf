@@ -29,7 +29,3 @@ output "vpc_cidr_block" {
 output private_subnet_cidr_blocks {
   value = module.vpc.private_subnet_cidr_blocks
 }
-
-  output "aws_default_region" {
-  value = module.vpc.aws_default_region
-}
