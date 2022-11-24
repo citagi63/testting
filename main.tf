@@ -14,3 +14,7 @@ module "vpc" {
   public_subnet_tag_name        = "${var.platform_name}-public-subnet"
   number_of_public_subnets      = 2
 }
+module "ecs-cluster" {
+  source                        = "./ecs-cluster"
+  cluster_name                  = "conductor"
+}
