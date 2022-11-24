@@ -1,7 +1,6 @@
 module "vpc" {
-  source  = "spacelift.io/citagi63/testting/vpc/"
-  version = "0.1.0"
-
+  source  = "/testting/vpc/"
+ 
   # Required inputs 
   app_port                = var.app_port
   aws_default_region      = var.aws_default_region
