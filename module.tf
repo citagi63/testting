@@ -39,7 +39,7 @@ module "ecs-fargate" {
   environment        = var.environment# string
   private_subnet_ids = var.private_subnet_tag_name.id # list(string)
   region             = "us-east-2"# string
-  cluster_name       = var.cluster_name
+  #cluster_name       = var.cluster_name
   vpc_id             = var.vpc_tag_name.id# string
 
   # Optional inputs 
