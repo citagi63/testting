@@ -1,5 +1,5 @@
 module "vpc" {
-  source  = "/testting/vpc/"
+  source  = "./vpc/"
  
   # Required inputs 
   app_port                = var.app_port
