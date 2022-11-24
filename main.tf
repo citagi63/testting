@@ -19,3 +19,6 @@ module "ecs-cluster" {
   cluster_name                  = "conductor"
   cluster_tag_name              = "conductor"
 }
+module "ecs_fargate" {
+  source = ./ecs-fargate"
+  }
