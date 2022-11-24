@@ -1,4 +1,4 @@
-module "ecs_fargate" {
+module "ecs-fargate" {
   source = "./ecs-fargate"
   alb_name  = "conductor"
   app_image = "nginx"
