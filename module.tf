@@ -26,7 +26,7 @@ module "vpc" {
   version = "0.1.0"
 
   # Required inputs 
-  cluster_name     = "conductor-server" # string
+  cluster_name     = var.cluster.name # string
   cluster_tag_name = "conductor-server"# string
 }
 module "ecs-fargate" {
@@ -39,6 +39,7 @@ module "ecs-fargate" {
   environment        = var.environment# string
   private_subnet_ids = var.private_subnet_tag_name.id # list(string)
   region             = "us-east-2"# string
+  cluster_name       = var.cluster_name
   vpc_id             = var.vpc_tag_name.id# string
 
   # Optional inputs 
