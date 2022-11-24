@@ -1,5 +1,5 @@
 module "vpc" {
-  source  = "spacelift.io/citagi63/vpc/aws"
+  source  = "spacelift.io/citagi63/testing/vpc/aws"
   version = "0.1.0"
 
   # Required inputs 
