@@ -26,18 +26,17 @@ module "opensearch" {
   version = "0.1.0"
 
   # Required inputs 
-  dedicated_master_enabled       = .terraform/modules/opensearch.var.dedicated_master_enabled # bool
-  domain_name                    = .terraform/modules/opensearch.var.domain_name # string
-  ebs_enabled                    = # bool
-  elasticsearch_version          = # string
-  instance_count                 = # number
-  instance_type                  = # string
-  internal_user_database_enabled = # bool
-  master_user_name               = # string
-  master_user_password           = # string
-  subnet_id                      = # string
-  volume_size                    = # number
-  volume_type                    = # string
+  # domain_name                    = .terraform/modules/opensearch.var.domain_name # string
+  #ebs_enabled                    = # bool
+  #elasticsearch_version          = # string
+  #instance_count                 = # number
+  #instance_type                  = # string
+  #internal_user_database_enabled = # bool
+  #master_user_name               = # string
+  #master_user_password           = # string
+  #subnet_id                      = # string
+  #volume_size                    = # number
+  #volume_type                    = # string
 
   # Optional inputs 
   # enforce_https       = bool
