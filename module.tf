@@ -26,6 +26,6 @@ module "vpc" {
   version = "0.1.0"
 
   # Required inputs 
-  cluster_name     = conductor-server # string
-  cluster_tag_name = conductor-server# string
+  cluster_name     = "conductor-server" # string
+  cluster_tag_name = "conductor-server"# string
 }
