@@ -1,5 +1,5 @@
 module "vpc" {
-  source  = "spacelift.io/citagi63/vpc/default"
+  source  = "/vpc/"
   version = "0.1.0"
 
   # Required inputs 
