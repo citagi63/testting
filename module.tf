@@ -4,12 +4,12 @@ module "vpc" {
 
   # Required inputs 
   app_port                =  80
-  aws_default_region      =  us-east-2
-  environment             =  dev
-  main_pvt_route_table_id =  main
-  private_subnet_tag_name =  conductor-public
-  public_subnet_tag_name  =  conductor-prate
-  vpc_tag_name            =  conductor-server
+  aws_default_region      =  "us-east-2"
+  environment             =  "dev"
+  main_pvt_route_table_id =  "main"
+  private_subnet_tag_name =  "conductor-public"
+  public_subnet_tag_name  =  "conductor-prate"
+  vpc_tag_name            =  "conductor-server"
 
   # Optional inputs 
    availability_zones            = ["us-east-2a" , "us-east-2b"]
