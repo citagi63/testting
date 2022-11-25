@@ -2,6 +2,7 @@ module "vpc" {
   source                        = "./vpc"
   vpc_tag_name                  = "${var.platform_name}-vpc"
   number_of_private_subnets     = 2
+  number_of_private_subnets_db  = 2
   private_subnet_tag_name       = "${var.platform_name}-private-subnet"
   #route_table_tag_name          = "${var.platform_name}-rt"
   environment                   = var.environment
@@ -14,12 +15,7 @@ module "vpc" {
   public_subnet_tag_name        = "${var.platform_name}-public-subnet"
   number_of_public_subnets      = 2
 }
-module "ecs-cluster" {
-  source                        = "./ecs-cluster"
-  cluster_name                  = "conductor"
-  cluster_tag_name              = "conductor"
-}
-
+ 
   resource "aws_security_group" "lb" {
   name        = "${var.security_group_lb_name}-${var.environment}"
   description = var.security_group_lb_description
