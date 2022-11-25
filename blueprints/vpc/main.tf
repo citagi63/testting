@@ -1,5 +1,5 @@
 module "vpc" {
-  source                        = "./vpc"
+  source                        = "../../module/vpc"
   vpc_tag_name                  = "${var.platform_name}-vpc"
   number_of_private_subnets     = 2
   private_subnet_tag_name       = "${var.platform_name}-private-subnet"
