@@ -52,17 +52,17 @@ resource "aws_vpc_endpoint" "cloudwatch" {
 }
 
 # S3
-resource "aws_vpc_endpoint" "s3" {
-  vpc_id       = module.vpc.vpc_id
-  service_name = "com.amazonaws.${var.aws_default_region}.s3"
-  vpc_endpoint_type = "Gateway"
-  route_table_ids = [var.main_pvt_route_table_id]
+#resource "aws_vpc_endpoint" "s3" {
+  #vpc_id       = module.vpc.vpc_id
+  #service_name = "com.amazonaws.${var.aws_default_region}.s3"
+  #vpc_endpoint_type = "Gateway"
+  #route_table_ids = [var.main_pvt_route_table_id]
 
-  tags = {
-    Name = "S3 VPC Endpoint Gateway - ${var.environment}"
-    Environment = var.environment
-  }
-}
+  #tags = {
+   # Name = "S3 VPC Endpoint Gateway - ${var.environment}"
+   # Environment = var.environment
+ # }
+#}
 
 # RDS
 resource "aws_vpc_endpoint" "rds" {
