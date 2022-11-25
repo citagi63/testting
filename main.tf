@@ -37,8 +37,8 @@ module "vpc" {
 }
 module "ecs_cluster" {
   source           = "./ecs-cluster"
-  cluster_tag_name = ""
-  name             = ""
+  cluster_tag_name = var.cluster_tag_name
+  name             = var.cluster_name
 } 
 
 resource "aws_security_group" "ecs_tasks" {
