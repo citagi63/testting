@@ -1,6 +1,6 @@
 resource "aws_ecs_service" "main" {
   name            = "conductor-service"
-  cluster         = aws_ecs_cluster.conductor.name
+  cluster         = var.cluster_name
   task_definition = aws_ecs_task_definition.conductor_task.arn
   desired_count   = 1
   launch_type     = "FARGATE"
