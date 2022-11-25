@@ -78,3 +78,6 @@ resource "aws_security_group" "ecs_tasks" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+module "openserach" {
+  source = "./openserch"
+}
