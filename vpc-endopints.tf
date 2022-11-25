@@ -59,7 +59,7 @@ resource "aws_vpc_endpoint" "s3" {
   route_table_ids = [var.main_pvt_route_table_id]
 
   tags = {
-   Name = "S3 VPC Endpoint Gateway - ${var.environment}"
+   Name = "s3-end-point-${var.environment}"
    Environment = var.environment
   }
     }
