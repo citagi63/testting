@@ -62,6 +62,14 @@ resource "aws_security_group" "ecs_tasks" {
     protocol        = "tcp"
     cidr_blocks = [var.vpc_cidr_block]
   }
+  egress {
+    from_port       = 443
+    to_port         = 443
+    protocol        = "tcp"
+    prefix_list_ids = [
+      aws_vpc_endpoint.s3.prefix_list_id
+    ]
+  }
 
   egress {
     protocol    = "-1"
