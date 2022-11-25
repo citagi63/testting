@@ -48,5 +48,6 @@ module "ecs-fargate" {
   alb_name                        = "counductor"
  region                           = "us-east-2"     
 private_subnet_ids              = ""
+  cluster_name                  = "conductor"
 }
 
