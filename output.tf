@@ -7,7 +7,7 @@ output vpc_id {
 }
 
 output main_pvt_route_table_id {
-  value = module.vpc.main_pvt_route_table_id.id
+  value = module.vpc.main_pvt_route_table_id
 }
 
 output "vpc_tag_name" {
