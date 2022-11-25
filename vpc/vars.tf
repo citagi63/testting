@@ -64,7 +64,7 @@ variable "availability_zones" {
 }
 variable "number_of_private_subnets_db"{
   type  = number
-  default = 2
+  default = 1
   description = "number of subnets for DB"
 }
 
