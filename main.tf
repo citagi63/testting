@@ -35,11 +35,7 @@ module "vpc" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-module "ecs_cluster" {
-  source           = "./ecs-cluster"
-  cluster_tag_name = var.cluster_tag_name
-  name             = var.cluster_name
-} 
+
 
 resource "aws_security_group" "ecs_tasks" {
   name        = "${var.security_group_ecs_tasks_name}-${var.environment}"
