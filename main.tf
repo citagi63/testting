@@ -37,7 +37,7 @@ module "ecs-fargate" {
   #app_port                         = 0
   #aws_default_region               = ""
   #aws_security_group_ecs_tasks_id  = ""
-  cluster_id                       = ""
+  cluster_id                       = module.ecs-cluster.cluster_name.id
   #enable_cross_zone_load_balancing = ""
   environment                      = ""
   #fargate_cpu                      = 0
