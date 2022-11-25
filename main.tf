@@ -34,7 +34,7 @@ module "ecs-fargate" {
   source                           = "./module/ecs-fargate"
   #app_count                        = ""
   app_image                        = ""
-  app_port                         = 0
+  #app_port                         = 0
   #aws_default_region               = ""
   #aws_security_group_ecs_tasks_id  = ""
   cluster_id                       = ""
@@ -45,5 +45,7 @@ module "ecs-fargate" {
   #name                             = ""
   #private_subnet_ids               = []
   vpc_id                           = ""
+  alb_name                        = "counductor"
+ region                           = "us-east-2"     
 }
 
