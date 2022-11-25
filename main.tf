@@ -20,7 +20,7 @@ module "vpc_ecs" {
 #####################
 
 module "ecs_cluster" {
-  source           = "./modules/ecs-cluster"
+  source           = "./module/ecs-cluster"
   cluster_tag_name = ""
   name             = ""
 }
@@ -30,7 +30,7 @@ module "ecs_cluster" {
 #########################################
 
 module "ecs_fargate" {
-  source                           = "./modules/ecs-fargate"
+  source                           = "./module/ecs-fargate"
   app_count                        = ""
   app_image                        = ""
   app_port                         = 0
