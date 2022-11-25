@@ -2,7 +2,7 @@
 ######## VPC ########
 #####################
 
-module "vpc_ecs" {
+module "vpc" {
   source                  = "./blueprints/vpc"
   app_port                = ""
   availability_zones      = []
@@ -19,7 +19,7 @@ module "vpc_ecs" {
 #### ECS Cluster ####
 #####################
 
-module "ecs_cluster" {
+module "ecs-cluster" {
   source           = "./module/ecs-cluster"
   cluster_tag_name = ""
   name             = ""
@@ -29,7 +29,7 @@ module "ecs_cluster" {
 #### ECS task definition and service ####
 #########################################
 
-module "ecs_fargate" {
+module "ecs-fargate" {
   source                           = "./module/ecs-fargate"
   app_count                        = ""
   app_image                        = ""
