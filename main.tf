@@ -49,5 +49,6 @@ module "ecs-fargate" {
  region                           = "us-east-2"     
 private_subnet_ids               = ["subnet-0057b28945ae9b470","subnet-0b1e47cb2a2930c1c"]
   cluster_name                  = "conductor"
+  security_group                = aws_security_group.lb.name.id
 }
 
