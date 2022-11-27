@@ -35,6 +35,7 @@ module "vpc" {
   }
     tags = {
       Nam = "loadbalacer"
+    }
 }
 
 
