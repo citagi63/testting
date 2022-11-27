@@ -16,7 +16,7 @@ variable "private_subnet_tag_name" {
 
 variable "number_of_public_subnets" {
   type = number
-  default = 1
+ 
   description = "The number of private subnets in a VPC."
 }
 
