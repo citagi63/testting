@@ -3,7 +3,7 @@ resource "aws_lb" "alb" {
   internal           = true
   load_balancer_type = "application"
   subnets            = var.private_subnet_ids
-  security_groups    = [aws_security_group.lb.loadbalacer.id]
+  security_groups    = [aws_security_group.lb.name.id]
   enable_cross_zone_load_balancing = true
 
   enable_deletion_protection = false
