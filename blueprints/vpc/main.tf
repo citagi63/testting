@@ -12,7 +12,7 @@ module "vpc" {
   availability_zones            = var.availability_zones
   aws_default_region            = var.aws_default_region
   public_subnet_tag_name        = "${var.platform_name}-public-subnet"
-  number_of_public_subnets      = var.number_of_public_subnets
+  number_of_public_subnets      = 2
 }
 
   resource "aws_security_group" "lb" {
