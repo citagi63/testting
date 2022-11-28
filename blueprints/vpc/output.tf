@@ -21,3 +21,7 @@ output "vpc_cidr_block" {
 output private_subnet_cidr_blocks {
   value = module.vpc.private_subnet_cidr_blocks
 }
+
+output private_subnet_cidr_blocks {
+  value = module.vpc.security_group_lb_name.id
+}
