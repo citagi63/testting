@@ -56,7 +56,7 @@ resource "aws_vpc_endpoint" "cloudwatch" {
   vpc_id       = module.vpc.vpc_id
   service_name = "com.amazonaws.${var.aws_default_region}.s3"
   vpc_endpoint_type = "Gateway"
-  route_table_ids = ["rtb-0fffc708e588b2f66"]
+  route_table_ids = ["rtb-06c1568617233c4ac"]
 
   tags = {
     Name = "S3 VPC Endpoint Gateway - ${var.environment}"
