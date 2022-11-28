@@ -9,11 +9,6 @@ output vpc_arn {
 output vpc_id {
   value = module.vpc.vpc_id
 }
-
-output main_pvt_route_table_id {
-  value = module.vpc.main_pvt_route_table_id
-}
-
 output "vpc_tag_name" {
   value = module.vpc.vpc_tag_name
 }
