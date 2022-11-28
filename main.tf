@@ -44,7 +44,7 @@ module "ecs-fargate" {
   #fargate_memory                   = 0
   #name                             = ""
   #private_subnet_ids               = []
- vpc_id                              = module.vpc.vpc_id
+ vpc_id                              = "$(module.vpc.vpc_id)"
   alb_name                        = "counductor"
  region                           = "us-east-2"     
 private_subnet_ids               = ["subnet-0057b28945ae9b470","subnet-0b1e47cb2a2930c1c"]
