@@ -2,7 +2,7 @@ output vpc_arn {
   value = module.vpc.vpc_arn
 }
  output private_subnet_ids {
-  value = module.vpc.private_subnet_tag_name
+  value = "${module.vpc.private_subnet_tag_name.id}"
 }
  
 
