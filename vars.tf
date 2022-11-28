@@ -3,7 +3,7 @@ variable "aws_default_region" {}
 variable "org_name" {}
 variable "platform_name" {}
 
-#variable "security_account_id" {}
+variable "security_account_id" {}
 
 variable "environment" {}
 
