@@ -34,7 +34,7 @@ module "vpc" {
     cidr_blocks = ["0.0.0.0/0"]
   }
     tags = {
-      Nam = "loadbalacer"
+      Name = "loadbalacer"
     }
 }
 
