@@ -15,7 +15,7 @@ output aLb-name {
   value = aws_lb.alb.name
 }
 output security-group-id {
-  value = aws_security_group.allow_alb.id
+  value = aws_security_group.lb.id
 }
 output image {
   value = var.app_image
