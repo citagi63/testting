@@ -7,9 +7,9 @@ module "vpc" {
   app_port                = ""
   availability_zones      = ["us-east-2a" , "us-east-2b"]
   aws_default_region      = var.aws_default_region
-  environment             = ""
+  environment             = var.environment
   main_pvt_route_table_id = ""
-  platform_name           = ""
+  platform_name           = var.platform_name
   private_subnet_tag_name = ""
   public_subnet_tag_name  = ""
   vpc_tag_name            = ""
