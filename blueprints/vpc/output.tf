@@ -23,3 +23,7 @@ output security_group_lb_name {
 output aws_default_region {
  value = var.aws_default_region
    }
+  
+ output private_subnet_ids {
+   value = module.vpc.private_subnet_ids
+     }
