@@ -47,7 +47,7 @@ module "ecs-fargate" {
  vpc_id                              = "${module.vpc.vpc_id}"
   alb_name                        = "counductor"
  region                           = "us-east-2"     
-private_subnet_ids               = ["subnet-00ee111ec39fa5f2f","subnet-01149d4665fe7ac64"]
+private_subnet_ids               = ["${module.vpc.private_subnet_ids}"]
   cluster_name                  = "conductor"
   
 }
