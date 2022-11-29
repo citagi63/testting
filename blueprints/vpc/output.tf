@@ -20,6 +20,6 @@ output private_subnet_cidr_blocks {
 output security_group_lb_name {
   value = aws_security_group.lb.id
 }
-output private_subnet_id {
- value = module.vpc.private_subnet_id.id
+output aws_default_region {
+ value = module.vpc.aws_default_region
    }
