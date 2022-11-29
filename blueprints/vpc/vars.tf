@@ -89,7 +89,7 @@ variable "app_port" {
 }
 
 variable "aws_default_region" {
-default = "us-east-1"
+default = "us-east-2"
 }
 
 variable "availability_zones" {
