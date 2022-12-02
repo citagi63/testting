@@ -46,7 +46,7 @@ module "ecs-fargate" {
   #private_subnet_ids               = []
  vpc_id                              = "${module.vpc.vpc_id}"
   alb_name                        = "counductor"
- region                           = "us-east-2"     
+ region                           = var.aws_default_region     
 private_subnet_ids               = "${module.vpc.private_subnet_ids}"
   cluster_name                  = "conductor"
   
