@@ -2,9 +2,7 @@ variable "aws_default_region" {}
 
 variable "org_name" {}
 variable "platform_name" {}
-variable "availability_zones" {
-  type= list(string)
-}
+
 #variable "security_group_id" {}
 
 variable "environment" {}
