@@ -59,7 +59,7 @@ variable "aws_default_region" {}
 
 variable "availability_zones" {
   type  = list(string)
-  default = ["us-east-1a", "us-east-2b"]
+  default = ["us-east-1a", "us-east-1b"]
   description = "List of availability zones for the selected region"
 }
 variable "number_of_private_subnets_db"{
