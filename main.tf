@@ -5,7 +5,7 @@
 module "vpc" {
   source                  = "./blueprints/vpc"
   app_port                = ""
-  availability_zones      = ["us-east-2a" , "us-east-2b"]
+  availability_zones      = [var.availability_zones]
   aws_default_region      = var.aws_default_region
   environment             = var.environment
   main_pvt_route_table_id = ""
