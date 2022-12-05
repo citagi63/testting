@@ -27,3 +27,6 @@ output aws_default_region {
  output private_subnet_ids {
    value = module.vpc.private_subnet_ids
      }
+   output availability_zones {
+     value = var.availability_zones
+   }
