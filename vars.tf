@@ -13,3 +13,4 @@ variable "environment" {}
 variable avalability_zones {}
 variable cluster_name {}
 variable alb_name {}
+variable availability_zones{}
