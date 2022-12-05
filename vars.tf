@@ -11,3 +11,5 @@ variable "environment" {}
 
 #variable "deployment_service_account_user_arn" {}
 variable avalability_zones {}
+variable cluster_name {}
+variable cluster_tag_name {}
