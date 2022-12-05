@@ -103,7 +103,7 @@ resource "aws_nat_gateway" "conductor_nat_db" {
   count = 1
   subnet_id = aws_subnet.conductor_public_subnet[count.index].id
   tags = {
-    Name = "nat_gateway-db${var.environment}"
+    Name = "nat_gateway-db-${var.environment}"
   }
 }
 resource "aws_route_table" "private_route_table_db" {
