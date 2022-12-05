@@ -48,7 +48,7 @@ module "ecs-fargate" {
   alb_name                        = "counductor"
  region                           = var.aws_default_region     
 private_subnet_ids               = "${module.vpc.private_subnet_ids}"
-  cluster_name                  = "${module.ecs_cluster.cluster_name}"
+  cluster_name                  = "${module.ecs-cluster.cluster_name}"
   
 }
 
