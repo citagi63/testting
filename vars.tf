@@ -10,3 +10,4 @@ variable "environment" {}
 #variable "account_id" {}
 
 #variable "deployment_service_account_user_arn" {}
+variable avalability_zones {}
