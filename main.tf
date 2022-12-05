@@ -32,7 +32,7 @@ module "ecs-cluster" {
 module "ecs-fargate" {
   source                           = "./module/ecs-fargate"
   #app_count                       = ""
-  app_image                        = "nginx"
+  app_image                        = var.app_image
   #app_port                        = 0
   #aws_default_region              = ""
   #aws_security_group_ecs_tasks_id = ""
