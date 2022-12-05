@@ -13,4 +13,7 @@ variable "environment" {}
 variable avalability_zones {}
 variable cluster_name {}
 variable alb_name {}
-variable availability_zones{}
+variable availability_zones{
+   type= list(string)
+   defult = ["us-east-1a","us-east-1b"]
+}
