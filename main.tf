@@ -21,8 +21,8 @@ module "vpc" {
 
 module "ecs-cluster" {
   source           = "./module/ecs-cluster"
-  cluster_tag_name = "conductor"
-  cluster_name     =  "conductor"
+  cluster_tag_name = var.cluster_name
+  cluster_name     =  var.cluster_name
   #name             = ""
 }
 
