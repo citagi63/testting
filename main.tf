@@ -23,7 +23,6 @@ module "ecs-cluster" {
   source           = "./module/ecs-cluster"
   cluster_tag_name = var.cluster_name
   cluster_name     =  var.cluster_name
-  #name             = ""
 }
 
 #########################################
@@ -32,23 +31,22 @@ module "ecs-cluster" {
 
 module "ecs-fargate" {
   source                           = "./module/ecs-fargate"
-  #app_count                        = ""
+  #app_count                       = ""
   app_image                        = "nginx"
-  #app_port                         = 0
-  #aws_default_region               = ""
-  #aws_security_group_ecs_tasks_id  = ""
-  #cluster_id                       = module.ecs-cluster.cluster_name.id
+  #app_port                        = 0
+  #aws_default_region              = ""
+  #aws_security_group_ecs_tasks_id = ""
   #enable_cross_zone_load_balancing = ""
   environment                      = ""
-  #fargate_cpu                      = 0
-  #fargate_memory                   = 0
-  #name                             = ""
-  #private_subnet_ids               = []
- vpc_id                              = "${module.vpc.vpc_id}"
-  alb_name                        = "counductor"
- region                           = var.aws_default_region     
-private_subnet_ids               = "${module.vpc.private_subnet_ids}"
-  cluster_name                  = "${module.ecs-cluster.cluster_name}"
+  #fargate_cpu                     = 0
+  #fargate_memory                  = 0
+  #name                            = ""
+  #private_subnet_ids              = []
+  vpc_id                           = "${module.vpc.vpc_id}"
+  alb_name                         = var.alb_name
+  region                           = var.aws_default_region     
+  private_subnet_ids               = "${module.vpc.private_subnet_ids}"
+  cluster_name                     = "${module.ecs-cluster.cluster_name}"
   
 }
 
